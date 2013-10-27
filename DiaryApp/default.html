@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>DiaryApp</title>
+
+        <!-- WinJS references -->
+        <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+        <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+        <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+        <script type="text/javascript" src="/LiveSDKHTML/js/wl.js"></script>
+
+        <!-- DiaryApp references -->
+        <link href="/css/default.css" rel="stylesheet" />
+        <script src="/js/notificator.js"></script>
+        <script src="/js/data.js"></script>
+        <script src="/js/navigator.js"></script>
+        <script src="/js/default.js"></script>
+    </head>
+    <body>
+        <div id="contenthost" data-win-control="Application.PageControlNavigator" data-win-options="{home: '/pages/home/home.html'}"></div>
+    
+        <!-- AppBar -->
+        <div id="appbar-id" data-win-control="WinJS.UI.AppBar" data-win-options="">
+            <button
+                data-win-control="WinJS.UI.AppBarCommand"
+                data-win-options="{id:'cmdSync', label:'Sync photos', icon:'sync',
+                    section:'selection', tooltip:'Sync memories'}"
+                onclick="AppBarButtons.sync()">
+            </button>
+            <button
+                data-win-control="WinJS.UI.AppBarCommand"
+                data-win-options="{id:'cmdNew', label:'New photo', icon:'camera',
+                    section:'global', tooltip:'Capture new photo'}"
+                onclick="AppBarButtons.capturePhoto()">
+            </button>
+        </div>
+
+    </body>
+</html>
